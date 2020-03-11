@@ -5,6 +5,7 @@ import { StudentModel } from '../models/StudentModel';
   providedIn: 'root'
 })
 export class StudentServiceService {
+  
   students :StudentModel[] = [
     { Id: 11, StudentName: 'Aya',Age:20,Active:true,Gender:'female' },
     { Id: 12, StudentName: 'Narco' ,Age:22,Active:true,Gender:'Male' },
@@ -20,5 +21,10 @@ export class StudentServiceService {
 constructor() { }
 getstudents (): StudentModel[] {
   return this.students;
+}
+getStudentById(id:number){
+  console.log("service",this.students.filter(x => x.Id === id),"serId",id)
+return this.students.filter(x => x.Id === id);
+
 }
 }

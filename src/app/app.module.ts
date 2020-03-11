@@ -8,6 +8,7 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { FormsModule } from '@angular/forms';
 import { StudentListComponent } from './StudentList/StudentList.component';
 import { StudentEditComponent } from './StudentEdit/StudentEdit.component';
+import { StudentRecordComponent } from './StudentRecord/StudentRecord.component';
 
 
 
@@ -17,7 +18,8 @@ import { StudentEditComponent } from './StudentEdit/StudentEdit.component';
       SimplebindingComponent,
       MyComponentComponent,
       StudentListComponent,
-      StudentEditComponent
+      StudentEditComponent,
+      StudentRecordComponent
    ],
    imports: [
       BrowserModule,

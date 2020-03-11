@@ -1,10 +1,12 @@
 <!-- <p>
   StudentList works!
 </p> -->
-<li *ngFor="let student of students">
+<!-- <li *ngFor="let student of students" [class.selected]="student === selectedStudent" (click)="onSelect(student)"> 
   <span class="badge">{{student.StudentName}}</span>, {{student.Age}}
+
   <span></span>
-  <button>Add</button>
-  <span></span>
-  <button>Edit</button>
-</li>
+  <button>Edit</button> 
+</li> -->
+
+
+<app-StudentRecord *ngFor="let student of students" [student]='student' (onEditClick)='onEditClick($event)'> </app-StudentRecord>
