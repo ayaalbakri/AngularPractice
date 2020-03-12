@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { StudentListComponent } from './StudentList/StudentList.component';
 import { StudentEditComponent } from './StudentEdit/StudentEdit.component';
 import { StudentRecordComponent } from './StudentRecord/StudentRecord.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -24,7 +25,8 @@ import { StudentRecordComponent } from './StudentRecord/StudentRecord.component'
    imports: [
       BrowserModule,
       AppRoutingModule,
-      FormsModule
+      FormsModule,
+      ReactiveFormsModule
    ],
    providers: [],
    bootstrap: [

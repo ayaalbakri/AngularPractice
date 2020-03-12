@@ -24,7 +24,7 @@ getstudents (): StudentModel[] {
 }
 getStudentById(id:number){
   console.log("service",this.students.filter(x => x.Id === id),"serId",id)
-return this.students.filter(x => x.Id === id);
+return this.students.filter(x => x.Id === id)[0];
 
 }
 }

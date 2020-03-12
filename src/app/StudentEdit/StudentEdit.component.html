@@ -1,4 +1,22 @@
-<p>
-  StudentEdit works!
-</p>
+<form [formGroup]="Form" (ngSubmit)="onSubmit(Form)" class="row product-adding">
+  <div class="form-group">
+      <label for="validationCustom01" class="col-form-label pt-0"><span>*</span> Name</label>
+      <input class="form-control" id="validationCustom01" type="text" [formControl]="Form.controls.StudentName">
+      <small *ngIf="Form.controls.StudentName.errors?.required  && Form.controls.StudentName.touched" class="help-block text-danger">
+          This Field is required
+      </small>
+  </div>
+
+  <div class="form-group">
+    <label for="validationCustom02" class="col-form-label pt-0"><span>*</span> Age</label>
+    <input class="form-control" id="validationCustom02" type="number" [formControl]="Form.controls.Age">
+    <small *ngIf="Form.controls.Age.errors?.required  && Form.controls.Age.touched" class="help-block text-danger">
+        This Field is required
+    </small>
+</div>
+  <button type="submit" class="btn btn-solid" [disabled]='Form.invalid'>
+      {{student?.Id==null? "Add" : "Update" }}
+  </button>
+</form>
+
 <div><button (click)='backtoList()'>Student List</button></div>
