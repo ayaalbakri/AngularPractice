@@ -11,7 +11,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 })
 export class StudentEditComponent implements OnInit {
   id: number;
-  student: any;
+  student: StudentModel;
   Form: FormGroup;
   constructor(private router: ActivatedRoute,
     private route: Router, private studentService: StudentServiceService,
@@ -56,7 +56,8 @@ export class StudentEditComponent implements OnInit {
     if (!valid) {
         return;
     }
-    if (this.student !== null) {            
+    if (this.student !== undefined) {         
+      console.log(this.student,"student")   
         console.log(value,"exist user")
     }
     else {
